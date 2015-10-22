@@ -15,8 +15,17 @@ class Migration(migrations.Migration):
         migrations.CreateModel(
             name='PollPlugin',
             fields=[
-                ('cmsplugin_ptr', models.OneToOneField(parent_link=True, auto_created=True, primary_key=True, serialize=False, to='cms.CMSPlugin')),
-                ('poll', models.ForeignKey(to='polls.Poll')),
+                (
+                    'cmsplugin_ptr', models.OneToOneField(
+                        parent_link=True, auto_created=True, primary_key=True,
+                        serialize=False, to='cms.CMSPlugin'
+                        )
+                    ),
+                (
+                    'poll', models.ForeignKey(
+                        to='polls.Poll'
+                        )
+                ),
             ],
             options={
                 'abstract': False,
