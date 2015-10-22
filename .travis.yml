@@ -3,7 +3,6 @@ python:
   - "2.6"
   - "2.7"
 install:
-  - python setup.py install
   - pip install flake8
 script:
   - flake8 .
